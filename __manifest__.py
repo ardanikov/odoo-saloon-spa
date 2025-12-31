@@ -2,7 +2,7 @@
 {
     'name': "Salon",
 
-    'summary': "salon",
+    'summary': "Aplikasi Salon",
 
     'description': """
 Long description of module's purpose
@@ -11,7 +11,7 @@ Long description of module's purpose
     'author': "My Company",
     'website': "https://www.yourcompany.com",
     'category': 'Uncategorized',
-    'version': '0.1',
+    'version': '18.0.0.0.1',
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
@@ -21,6 +21,8 @@ Long description of module's purpose
         # 'security/ir.model.access.csv',
         # 'views/views.xml',
         # 'views/templates.xml',
+        'views/menu_salon.xml',
+        'views/pelanggan.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

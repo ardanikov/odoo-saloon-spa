@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <!-- cdn.pelanggan list view -->
+        <record id="cdn_pelanggan_view_list" model="ir.ui.view">
+            <field name="name">cdn.pelanggan.view.list</field>
+            <field name="model">cdn.pelanggan</field>
+            <field name="arch" type="xml">
+                <list>
+                    <!-- Add your fields here -->
+                    <field name="name"/>
+                    <field name="mobile"/>
+                    <field name="street"/>
+                    <field name="jenis_kelamin"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- cdn.pelanggan form view -->
+        <record id="cdn_pelanggan_view_form" model="ir.ui.view">
+            <field name="name">cdn.pelanggan.view.form</field>
+            <field name="model">cdn.pelanggan</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name="name"/>
+                            <field name="mobile"/>
+                            <field name="street"/>
+                            <field name="jenis_kelamin"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- cdn.pelanggan action window -->
+        <record id="cdn_pelanggan_action" model="ir.actions.act_window">
+            <field name="name">cdn.pelanggan.action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">cdn.pelanggan</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p><p>
+                    <!-- More details about what a user can do with this object will be OK --> 
+                
+                </p>
+            </field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="cdn_pelanggan_menu_act" name="Pelanggan" parent="cdn_salon_menu_root" action="cdn_pelanggan_action" sequence="1"/>
+
+    </data>
+</odoo>
