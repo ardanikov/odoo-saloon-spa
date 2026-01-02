@@ -19,10 +19,11 @@ Long description of module's purpose
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        # 'views/views.xml',
         # 'views/templates.xml',
+        'data/sequence.xml',
         'views/menu_salon.xml',
         'views/pelanggan.xml',
+        'views/terapis.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

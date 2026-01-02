@@ -8,6 +8,9 @@
     
         <!-- Sub Menu Item under the above Menu Item, this one will link to the action -->
         <menuitem id="cdn_pelanggan_menu" name="Pelanggan" parent="cdn_salon_menu_root" sequence="5"/>
+
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="cdn_menu_categ" name="Menu" parent="cdn_salon_menu_root" sequence="10"/>
     </data>
     
 

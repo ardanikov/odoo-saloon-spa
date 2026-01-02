@@ -3,3 +3,5 @@
 from . import models
 from . import pelanggan
 from . import res_partner_inherit
+from . import terapis
+from . import spesialis
