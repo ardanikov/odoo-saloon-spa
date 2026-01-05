@@ -7,8 +7,9 @@
         <menuitem id="cdn_salon_menu_root" name="Salon dan Spa" sequence="1" web_icon=""/>
 
         <!-- Sub Menu Item under the above Menu Item, this one will link to the action -->
-        <menuitem id="cdn_appointment_menu" name="Appointment" parent="cdn_salon_menu_root" sequence="5"/>
-        <menuitem id="cdn_pelanggan_menu" name="Pelanggan" parent="cdn_salon_menu_root" sequence="6"/>
+        <menuitem id="cdn_salon_menu_category" name="Appointment" parent="cdn_salon_menu_root" sequence="5"/>
+        <!-- <menuitem id="cdn_pelanggan_menu" name="Pelanggan" parent="cdn_salon_menu_root" sequence="10"/>
+        <menuitem id="cdn_cabang_menu" name="Cabang" parent="cdn_salon_menu_root" sequence="15"/> -->
     </data>
 
 
