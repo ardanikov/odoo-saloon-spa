@@ -14,5 +14,15 @@
 
             <field name="implementation">standard</field>
         </record>
+
+        <record id="seq_cdn_terapis" model="ir.sequence">
+            <field name="name">Kode Terapis</field>
+            <field name="code">cdn.terapis</field>
+            <field name="prefix">TRP/%(year)s/</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False" />
+        </record>
+
+
     </data>
 </odoo>

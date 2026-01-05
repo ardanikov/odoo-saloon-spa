@@ -26,6 +26,7 @@ Long description of module's purpose
         'views/pelanggan.xml',
         'views/product_inherit.xml',
         'views/cabang.xml',
+        'views/terapis.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

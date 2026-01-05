@@ -10,6 +10,8 @@
         <menuitem id="cdn_salon_menu_category" name="Appointment" parent="cdn_salon_menu_root" sequence="5"/>
         <!-- <menuitem id="cdn_pelanggan_menu" name="Pelanggan" parent="cdn_salon_menu_root" sequence="10"/>
         <menuitem id="cdn_cabang_menu" name="Cabang" parent="cdn_salon_menu_root" sequence="15"/> -->
+
+        <menuitem id="cdn_menu_categ" name="Terapis" parent="cdn_salon_menu_root" sequence="10"/>
     </data>
 
 
