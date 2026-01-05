@@ -11,7 +11,7 @@
         <!-- <menuitem id="cdn_pelanggan_menu" name="Pelanggan" parent="cdn_salon_menu_root" sequence="10"/>
         <menuitem id="cdn_cabang_menu" name="Cabang" parent="cdn_salon_menu_root" sequence="15"/> -->
 
-        <menuitem id="cdn_menu_categ" name="Terapis" parent="cdn_salon_menu_root" sequence="20" action="action_cdn_terapis"/>
+        <menuitem id="cdn_menu_categ" name="Terapis" parent="cdn_salon_menu_root" sequence="10"/>
     </data>
 
 

@@ -69,10 +69,6 @@
         </record>
 
         <!-- MENU -->
-        <menuitem id="menu_cdn_master"
-                  name="Master Data"
-                  sequence="10"/>
-
         <menuitem id="menu_cdn_terapis"
                   name="Terapis"
                   parent="cdn_menu_categ"
