@@ -8,12 +8,12 @@
             <field name="model">cdn.terapis</field>
             <field name="arch" type="xml">
                 <list string="Terapis">
-                    <field name="kode"/>
-                    <field name="name"/>
-                    <field name="gender"/>
-                    <field name="phone"/>
-                    <field name="email"/>
-                    <field name="aktif"/>
+                    <field name="kode" />
+                    <field name="name" />
+                    <field name="gender" />
+                    <field name="phone" />
+                    <field name="email" />
+                    <field name="aktif" />
                 </list>
             </field>
         </record>
@@ -29,31 +29,29 @@
                         <!-- DATA UTAMA -->
                         <group>
                             <group>
-                                <field name="kode"/>
-                                <field name="name"/>
-                                <field name="gender"/>
+                                <field name="kode" />
+                                <field name="name" />
+                                <field name="gender" />
                             </group>
 
                             <group>
-                                <field name="phone"/>
-                                <field name="email"/>
+                                <field name="phone" />
+                                <field name="email" />
                             </group>
                         </group>
 
                         <!-- SPESIALIS (DI DALAM TERAPIS) -->
                         <group string="Spesialis">
-                            <field name="spesialis_ids">
-                                <list editable="bottom">
-                                    <field name="name"/>
-                                    <field name="note"/>
-                                </list>
-                            </field>
+                            <field name="spesialis_ids"
+                                widget="many2many_tags"
+                                options="{'no_create': True}"
+                                domain="[('aktif','=',True)]" />
                         </group>
 
                         <!-- STATUS & CATATAN -->
                         <group>
-                            <field name="aktif"/>
-                            <field name="note"/>
+                            <field name="aktif" />
+                            <field name="note" />
                         </group>
 
                     </sheet>
@@ -70,10 +68,9 @@
 
         <!-- MENU -->
         <menuitem id="menu_cdn_terapis"
-                  name="Terapis"
-                  parent="cdn_menu_categ"
-                  action="action_cdn_terapis"
-                  sequence="10"/>
-
+            name="Terapis"
+            parent="cdn_menu_categ"
+            action="action_cdn_terapis"
+            sequence="10" />
     </data>
 </odoo>

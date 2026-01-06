@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="cdn_spesialis_view_list" model="ir.ui.view">
+        <field name="name">cdn.spesialis.view.list</field>
+        <field name="model">cdn.spesialis</field>
+        <field name="arch" type="xml">
+            <list string="Spesialis Salon Spa">
+                <field name="kode"/>
+                <field name="name"/>
+                <field name="kategori"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="cdn_spesialis_view_form" model="ir.ui.view">
+        <field name="name">cdn.spesialis.view.form</field>
+        <field name="model">cdn.spesialis</field>
+        <field name="arch" type="xml">
+            <form string="Spesialis Salon Spa">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="kode"/>
+                            <field name="name"/>
+                            <field name="kategori"/>
+                        </group>
+
+                        <group>
+                            <field name="deskripsi" colspan="2"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_salon_spesialis" model="ir.actions.act_window">
+        <field name="name">Spesialis Salon Spa</field>
+        <field name="res_model">cdn.spesialis</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+
+    <menuitem id="menu_salon_spesialis"
+              name="Spesialis"
+              parent="cdn_menu_categ"
+              action="action_salon_spesialis"
+              sequence="20"/>
+
+</odoo>

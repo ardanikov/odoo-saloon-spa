@@ -18,9 +18,11 @@ class CdnTerapis(models.Model):
     aktif = fields.Boolean(string='Aktif', default=True)
     note = fields.Text(string='Catatan')
 
-    spesialis_ids = fields.One2many(
+    spesialis_ids = fields.Many2many(
         'cdn.spesialis',
+        'cdn_terapis_spesialis_rel',
         'terapis_id',
+        'spesialis_id',
         string='Spesialis'
     )
     
