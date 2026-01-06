@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="seq_appointment" model="ir.sequence">
+            <field name="name">Urutan Appointment</field>
+
+            <field name="code">cdn.appointment.name.sequence</field>
+
+            <field name="prefix">AP/%(y)s/%(month)s/</field>
+
+            <field name="padding">4</field>
+
+            <field name="number_increment">1</field>
+
+            <field name="implementation">standard</field>
+        </record>
+    </data>
+=======
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data noupdate="1">
@@ -25,4 +44,5 @@
 
 
     </data>
+>>>>>>> 8658b403968cd21eecf9cac646b8f678e3001f92
 </odoo>

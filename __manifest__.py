@@ -36,4 +36,3 @@ Long description of module's purpose
     'application': True,
     'license': 'OEEL-1',
 }
-
