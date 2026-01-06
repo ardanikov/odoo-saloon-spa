@@ -18,18 +18,21 @@ Long description of module's purpose
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        # 'views/views.xml',
-        # 'views/templates.xml',
         'data/ir_sequence_data.xml',
+        'security/groups.xml',
+        'security/ir.model.access.csv',
         'views/menu_salon.xml',
         'views/appointment.xml',
         'views/pelanggan.xml',
         'views/product_inherit.xml',
+        'views/cabang.xml',
+        'views/terapis.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
+    'installable': True,
+    'application': True,
+    'license': 'OEEL-1',
 }
-
