@@ -17,6 +17,14 @@ class CdnAppointmentHeader(models.Model):
     appointment_line_ids = fields.One2many(comodel_name='cdn.appointment.line', inverse_name='appointment_id', string='Appointment Lines')
     currency_id = fields.Many2one('res.currency', string='Currency', default=lambda self: self.env.company.currency_id)
     amount_total = fields.Monetary(string='Total', compute='_compute_amount_total', currency_field='currency_id', store=True)
+    terapis_id = fields.Many2one(comodel_name='cdn.terapis', string='Terapis')
+    spesialis_id = fields.Many2one(comodel_name='cdn.spesialis', string='Spesialis')
+    
+
+    @api.onchange('terapis_id')
+    def _onchange_terapis_id(self):
+        if self.terapis_id:
+            self.spesialis_id = self.terapis_id.spesialis_ids
     
 
     @api.model

@@ -46,6 +46,8 @@
                         <group>
                             <field name="pelanggan_id"/>
                             <field name="tanggal"/>
+                            <field name="terapis_id"/>
+                            <field name="spesialis_id" readonly="1"/>
                             <field name="cabang_id"/>
                             <field name="invoice_id" invisible="not invoice_id"/>
                             <field name="sale_order_id" invisible="not sale_order_id"/>
