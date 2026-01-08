@@ -25,7 +25,6 @@ Long description of module's purpose
         'views/appointment.xml',
         'views/pelanggan.xml',
         'views/product_inherit.xml',
-        'views/cabang.xml',
         'views/terapis.xml',
         'views/spesialis.xml',
     ],
