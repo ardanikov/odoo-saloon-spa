@@ -25,6 +25,7 @@ Long description of module's purpose
         'views/appointment.xml',
         'views/pelanggan.xml',
         'views/product_inherit.xml',
+        'views/res_partner_inherit.xml',
         'views/terapis.xml',
         'views/spesialis.xml',
     ],

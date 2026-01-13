@@ -6,7 +6,7 @@ class CdnAppointmentHeader(models.Model):
     _description = 'Cdn Appointment'
 
     name = fields.Char(string='No. Appointment')
-    pelanggan_id = fields.Many2one(comodel_name='cdn.pelanggan', required=True, ondelete='cascade', string='Pelanggan')
+    pelanggan_id = fields.Many2one(comodel_name='res.partner', domain=[('is_pelanggan', '=', True)], required=True, ondelete='cascade', string='Pelanggan')
     tanggal = fields.Date(string='Tanggal')
     # cabang_id = fields.Many2one(comodel_name='stock.warehouse', string='Cabang')
     status = fields.Selection([('draft', 'Draft'), ('confirm', 'Confirm')], string='Status', default='draft')

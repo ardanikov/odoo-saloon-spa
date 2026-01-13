@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
     <data>
-
-        <!-- cdn.pelanggan list view -->
-        <record id="cdn_pelanggan_view_list" model="ir.ui.view">
-            <field name="name">cdn.pelanggan.view.list</field>
-            <field name="model">cdn.pelanggan</field>
+        <!-- Custom list view for Pelanggan (res.partner) -->
+        <record id="view_partner_pelanggan_tree" model="ir.ui.view">
+            <field name="name">res.partner.pelanggan.tree</field>
+            <field name="model">res.partner</field>
+            <field name="priority">100</field>
             <field name="arch" type="xml">
                 <list>
-                    <!-- Add your fields here -->
                     <field name="name"/>
                     <field name="mobile"/>
                     <field name="street"/>
@@ -18,19 +16,20 @@
             </field>
         </record>
 
-        <!-- cdn.pelanggan form view -->
-        <record id="cdn_pelanggan_view_form" model="ir.ui.view">
-            <field name="name">cdn.pelanggan.view.form</field>
-            <field name="model">cdn.pelanggan</field>
+        <!-- Custom form view for Pelanggan (res.partner) -->
+        <record id="view_partner_pelanggan_form" model="ir.ui.view">
+            <field name="name">res.partner.pelanggan.form</field>
+            <field name="model">res.partner</field>
+            <field name="priority">100</field>
             <field name="arch" type="xml">
                 <form>
                     <sheet>
                         <group>
-                            <!-- Add your fields here -->
                             <field name="name"/>
                             <field name="mobile"/>
                             <field name="street"/>
                             <field name="jenis_kelamin"/>
+                            <field name="is_pelanggan" invisible="1"/>
                         </group>
                     </sheet>
                 </form>
@@ -41,9 +40,15 @@
         <record id="cdn_pelanggan_action" model="ir.actions.act_window">
             <field name="name">Data Pelanggan</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">cdn.pelanggan</field>
+            <field name="res_model">res.partner</field>
             <field name="view_mode">list,form</field>
+            <field name="domain">[('is_pelanggan', '=', True)]</field>
+            <field name="context">{'default_is_pelanggan': True}</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+                (0, 0, {'view_mode': 'list', 'view_id': ref('view_partner_pelanggan_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('view_partner_pelanggan_form')})]"/>
         </record>
+
         <menuitem id="cdn_pelanggan_menu" name="Pelanggan" parent="cdn_salon_menu_category" sequence="10" action="cdn_pelanggan_action"/>
     </data>
 </odoo>
