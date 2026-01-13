@@ -8,7 +8,7 @@ class CdnAppointmentHeader(models.Model):
     name = fields.Char(string='No. Appointment')
     pelanggan_id = fields.Many2one(comodel_name='cdn.pelanggan', required=True, ondelete='cascade', string='Pelanggan')
     tanggal = fields.Date(string='Tanggal')
-    cabang_id = fields.Many2one(comodel_name='stock.warehouse', string='Cabang')
+    # cabang_id = fields.Many2one(comodel_name='stock.warehouse', string='Cabang')
     status = fields.Selection([('draft', 'Draft'), ('confirm', 'Confirm')], string='Status', default='draft')
     invoice_id = fields.Many2one(comodel_name='account.move', ondelete='cascade', string='Invoice', readonly=True)
     payment_state = fields.Selection(related='invoice_id.payment_state', string="Status Pembayaran")
@@ -55,8 +55,8 @@ class CdnAppointmentHeader(models.Model):
                 'date_order': record.tanggal,
             }
             sale_order = self.env['sale.order'].with_context(
-                warehouse_id=record.cabang_id.id,
-                company_id=record.cabang_id.company_id.id
+                # warehouse_id=record.cabang_id.id,
+                # company_id=record.cabang_id.company_id.id
             ).create(sale_vals)
             
             for line in record.appointment_line_ids:
@@ -113,7 +113,7 @@ class CdnAppointmentLine(models.Model):
     _description = 'Cdn Appointment Line'
 
     appointment_id = fields.Many2one(comodel_name='cdn.appointment', required=True, ondelete='cascade', string='Appointment')
-    cabang_id = fields.Many2one(related='appointment_id.cabang_id', string='Cabang')
+    # cabang_id = fields.Many2one(related='appointment_id.cabang_id', string='Cabang')
     produk_id = fields.Many2one(comodel_name='product.product', required=True, ondelete='cascade', domain=[('is_spa_product', '=', True)], string='Produk')
     product_quantity = fields.Integer(string='Kuantitas', default=1, required=True)
     currency_id = fields.Many2one(related='appointment_id.currency_id', depends=['appointment_id.currency_id'], store=True, string='Currency')
