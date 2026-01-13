@@ -4,7 +4,7 @@
     <data>
 
         <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
-        <menuitem id="cdn_salon_menu_root" name="Salon dan Spa" sequence="1" web_icon=""/>
+        <menuitem id="cdn_salon_menu_root" name="Salon dan Spa" sequence="1" web_icon="odoo-saloon-spa,static/description/spaanim.jpg"/>
 
         <!-- Sub Menu Item under the above Menu Item, this one will link to the action -->
         <menuitem id="cdn_salon_menu_category" name="Appointment" parent="cdn_salon_menu_root" sequence="5"/>
